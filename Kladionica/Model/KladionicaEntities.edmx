@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KladionicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Listic">
+          <Key>
+            <PropertyRef Name="ListicId" />
+          </Key>
+          <Property Name="ListicId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VrijemeUplate" Type="datetime" Nullable="false" />
+          <Property Name="IznosUplate" Type="float" Nullable="false" />
+          <Property Name="MoguciDobitak" Type="float" />
+          <Property Name="UpdateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Oklada">
+          <Key>
+            <PropertyRef Name="OkladaId" />
+          </Key>
+          <Property Name="OkladaId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PonudaId" Type="bigint" Nullable="false" />
+          <Property Name="ListicId" Type="bigint" Nullable="false" />
+          <Property Name="Koeficient" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ponuda">
+          <Key>
+            <PropertyRef Name="PonudaId" />
+          </Key>
+          <Property Name="PonudaId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SusretId" Type="bigint" Nullable="false" />
+          <Property Name="Tip" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Koeficient" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Susret">
+          <Key>
+            <PropertyRef Name="SusretId" />
+          </Key>
+          <Property Name="SusretId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Domacin" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gost" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Oklada_Listic">
+          <End Role="Listic" Type="Self.Listic" Multiplicity="1" />
+          <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listic">
+              <PropertyRef Name="ListicId" />
+            </Principal>
+            <Dependent Role="Oklada">
+              <PropertyRef Name="ListicId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oklada_Ponuda">
+          <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="1" />
+          <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ponuda">
+              <PropertyRef Name="PonudaId" />
+            </Principal>
+            <Dependent Role="Oklada">
+              <PropertyRef Name="PonudaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ponuda_Susret">
+          <End Role="Susret" Type="Self.Susret" Multiplicity="1" />
+          <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Susret">
+              <PropertyRef Name="SusretId" />
+            </Principal>
+            <Dependent Role="Ponuda">
+              <PropertyRef Name="SusretId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetOkladas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ListicId" Type="bigint" Mode="In" />
+        </Function>
+        <EntityContainer Name="KladionicaModelStoreContainer">
+          <EntitySet Name="Listic" EntityType="Self.Listic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Oklada" EntityType="Self.Oklada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ponuda" EntityType="Self.Ponuda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Susret" EntityType="Self.Susret" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Oklada_Listic" Association="Self.FK_Oklada_Listic">
+            <End Role="Listic" EntitySet="Listic" />
+            <End Role="Oklada" EntitySet="Oklada" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oklada_Ponuda" Association="Self.FK_Oklada_Ponuda">
+            <End Role="Ponuda" EntitySet="Ponuda" />
+            <End Role="Oklada" EntitySet="Oklada" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ponuda_Susret" Association="Self.FK_Ponuda_Susret">
+            <End Role="Susret" EntitySet="Susret" />
+            <End Role="Ponuda" EntitySet="Ponuda" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KladionicaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Listic">
+          <Key>
+            <PropertyRef Name="ListicId" />
+          </Key>
+          <Property Name="ListicId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VrijemeUplate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IznosUplate" Type="Double" Nullable="false" />
+          <Property Name="MoguciDobitak" Type="Double" />
+          <NavigationProperty Name="Okladas" Relationship="Self.FK_Oklada_Listic" FromRole="Listic" ToRole="Oklada" />
+          <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Oklada">
+          <Key>
+            <PropertyRef Name="OkladaId" />
+          </Key>
+          <Property Name="OkladaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PonudaId" Type="Int64" Nullable="false" />
+          <Property Name="ListicId" Type="Int64" Nullable="false" />
+          <Property Name="Koeficient" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Listic" Relationship="Self.FK_Oklada_Listic" FromRole="Oklada" ToRole="Listic" />
+          <NavigationProperty Name="Ponuda" Relationship="Self.FK_Oklada_Ponuda" FromRole="Oklada" ToRole="Ponuda" />
+        </EntityType>
+        <EntityType Name="Ponuda">
+          <Key>
+            <PropertyRef Name="PonudaId" />
+          </Key>
+          <Property Name="PonudaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SusretId" Type="Int64" Nullable="false" />
+          <Property Name="Tip" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Koeficient" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Okladas" Relationship="Self.FK_Oklada_Ponuda" FromRole="Ponuda" ToRole="Oklada" />
+          <NavigationProperty Name="Susret" Relationship="Self.FK_Ponuda_Susret" FromRole="Ponuda" ToRole="Susret" />
+        </EntityType>
+        <EntityType Name="Susret">
+          <Key>
+            <PropertyRef Name="SusretId" />
+          </Key>
+          <Property Name="SusretId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Domacin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Ponudas" Relationship="Self.FK_Ponuda_Susret" FromRole="Susret" ToRole="Ponuda" />
+        </EntityType>
+        <Association Name="FK_Oklada_Listic">
+          <End Role="Listic" Type="Self.Listic" Multiplicity="1" />
+          <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Listic">
+              <PropertyRef Name="ListicId" />
+            </Principal>
+            <Dependent Role="Oklada">
+              <PropertyRef Name="ListicId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Oklada_Ponuda">
+          <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="1" />
+          <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ponuda">
+              <PropertyRef Name="PonudaId" />
+            </Principal>
+            <Dependent Role="Oklada">
+              <PropertyRef Name="PonudaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ponuda_Susret">
+          <End Role="Susret" Type="Self.Susret" Multiplicity="1" />
+          <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Susret">
+              <PropertyRef Name="SusretId" />
+            </Principal>
+            <Dependent Role="Ponuda">
+              <PropertyRef Name="SusretId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KladionicaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Listics" EntityType="Self.Listic" />
+          <EntitySet Name="Okladas" EntityType="Self.Oklada" />
+          <EntitySet Name="Ponudas" EntityType="Self.Ponuda" />
+          <EntitySet Name="Susrets" EntityType="Self.Susret" />
+          <AssociationSet Name="FK_Oklada_Listic" Association="Self.FK_Oklada_Listic">
+            <End Role="Listic" EntitySet="Listics" />
+            <End Role="Oklada" EntitySet="Okladas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Oklada_Ponuda" Association="Self.FK_Oklada_Ponuda">
+            <End Role="Ponuda" EntitySet="Ponudas" />
+            <End Role="Oklada" EntitySet="Okladas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ponuda_Susret" Association="Self.FK_Ponuda_Susret">
+            <End Role="Susret" EntitySet="Susrets" />
+            <End Role="Ponuda" EntitySet="Ponudas" />
+          </AssociationSet>
+          <FunctionImport Name="GetOkladas" ReturnType="Collection(KladionicaModel.GetOkladas_Result)">
+          <Parameter Name="ListicId" Mode="In" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetOkladas_Result">
+          <Property Type="Int64" Name="OkladaId" Nullable="false" />
+          <Property Type="Double" Name="Koeficient" Nullable="false" />
+          <Property Type="Int64" Name="ListicId" Nullable="false" />
+          <Property Type="Int64" Name="PonudaId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="113" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KladionicaModelStoreContainer" CdmEntityContainer="KladionicaEntities">
+          <EntitySetMapping Name="Listics">
+            <EntityTypeMapping TypeName="KladionicaModel.Listic">
+              <MappingFragment StoreEntitySet="Listic">
+                <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+                <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+                <ScalarProperty Name="VrijemeUplate" ColumnName="VrijemeUplate" />
+                <ScalarProperty Name="IznosUplate" ColumnName="IznosUplate" />
+                <ScalarProperty Name="MoguciDobitak" ColumnName="MoguciDobitak" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Okladas">
+            <EntityTypeMapping TypeName="KladionicaModel.Oklada">
+              <MappingFragment StoreEntitySet="Oklada">
+                <ScalarProperty Name="OkladaId" ColumnName="OkladaId" />
+                <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+                <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+                <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ponudas">
+            <EntityTypeMapping TypeName="KladionicaModel.Ponuda">
+              <MappingFragment StoreEntitySet="Ponuda">
+                <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+                <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+                <ScalarProperty Name="Tip" ColumnName="Tip" />
+                <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Susrets">
+            <EntityTypeMapping TypeName="KladionicaModel.Susret">
+              <MappingFragment StoreEntitySet="Susret">
+                <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+                <ScalarProperty Name="Domacin" ColumnName="Domacin" />
+                <ScalarProperty Name="Gost" ColumnName="Gost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetOkladas" FunctionName="KladionicaModel.Store.GetOkladas">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="KladionicaModel.GetOkladas_Result">
+                <ScalarProperty Name="OkladaId" ColumnName="OkladaId" />
+                <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+                <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+                <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

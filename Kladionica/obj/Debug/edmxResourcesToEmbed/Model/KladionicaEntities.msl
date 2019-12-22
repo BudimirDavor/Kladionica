@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KladionicaModelStoreContainer" CdmEntityContainer="KladionicaEntities">
+    <EntitySetMapping Name="Listics">
+      <EntityTypeMapping TypeName="KladionicaModel.Listic">
+        <MappingFragment StoreEntitySet="Listic">
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+          <ScalarProperty Name="VrijemeUplate" ColumnName="VrijemeUplate" />
+          <ScalarProperty Name="IznosUplate" ColumnName="IznosUplate" />
+          <ScalarProperty Name="MoguciDobitak" ColumnName="MoguciDobitak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Okladas">
+      <EntityTypeMapping TypeName="KladionicaModel.Oklada">
+        <MappingFragment StoreEntitySet="Oklada">
+          <ScalarProperty Name="OkladaId" ColumnName="OkladaId" />
+          <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+          <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+          <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ponudas">
+      <EntityTypeMapping TypeName="KladionicaModel.Ponuda">
+        <MappingFragment StoreEntitySet="Ponuda">
+          <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+          <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Susrets">
+      <EntityTypeMapping TypeName="KladionicaModel.Susret">
+        <MappingFragment StoreEntitySet="Susret">
+          <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+          <ScalarProperty Name="Domacin" ColumnName="Domacin" />
+          <ScalarProperty Name="Gost" ColumnName="Gost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetOkladas" FunctionName="KladionicaModel.Store.GetOkladas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="KladionicaModel.GetOkladas_Result">
+          <ScalarProperty Name="OkladaId" ColumnName="OkladaId" />
+          <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+          <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+          <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

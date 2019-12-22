@@ -1,0 +1,85 @@
+22.12.2019. 14:42:57	This log contains information about the import schema operation into project 'Database' on computer 'DESKTOP-78E0UUP' by user 'Davor'.
+22.12.2019. 14:42:57	Import of database schema has started.
+22.12.2019. 14:43:06	Gathering database credentials
+22.12.2019. 14:43:06	Gathering database options
+22.12.2019. 14:43:06	Gathering generic database scoped configuration option
+22.12.2019. 14:43:06	Gathering users
+22.12.2019. 14:43:06	Gathering roles
+22.12.2019. 14:43:06	Gathering application roles
+22.12.2019. 14:43:06	Gathering role memberships
+22.12.2019. 14:43:06	Gathering filegroups
+22.12.2019. 14:43:06	Gathering full-text catalogs
+22.12.2019. 14:43:06	Gathering assemblies
+22.12.2019. 14:43:06	Gathering certificates
+22.12.2019. 14:43:06	Gathering asymmetric keys
+22.12.2019. 14:43:06	Gathering symmetric keys
+22.12.2019. 14:43:06	Gathering encrypted symmetric keys
+22.12.2019. 14:43:06	Gathering schemas
+22.12.2019. 14:43:06	Gathering XML schema collections
+22.12.2019. 14:43:06	Gathering user-defined data types
+22.12.2019. 14:43:06	Gathering user-defined types
+22.12.2019. 14:43:06	Gathering table types
+22.12.2019. 14:43:06	Gathering unique keys for table types
+22.12.2019. 14:43:06	Gathering primary keys for table types
+22.12.2019. 14:43:06	Gathering indexes for table types
+22.12.2019. 14:43:06	Gathering check constraints for table types
+22.12.2019. 14:43:06	Gathering default constraints for table types
+22.12.2019. 14:43:06	Gathering partition functions
+22.12.2019. 14:43:06	Gathering partition schemes
+22.12.2019. 14:43:06	Gathering functions
+22.12.2019. 14:43:06	Gathering encrypted functions
+22.12.2019. 14:43:06	Gathering aggregates
+22.12.2019. 14:43:07	Gathering procedures
+22.12.2019. 14:43:07	Gathering encrypted procedures
+22.12.2019. 14:43:07	Gathering tables
+22.12.2019. 14:43:07	Gathering primary keys
+22.12.2019. 14:43:07	Gathering unique constraints
+22.12.2019. 14:43:07	Gathering foreign keys
+22.12.2019. 14:43:07	Gathering default constraints
+22.12.2019. 14:43:07	Gathering check constraints
+22.12.2019. 14:43:07	Gathering views
+22.12.2019. 14:43:07	Gathering encrypted views
+22.12.2019. 14:43:07	Gathering indexes
+22.12.2019. 14:43:07	Gathering statistics
+22.12.2019. 14:43:07	Gathering full-text index stoplists
+22.12.2019. 14:43:07	Gathering search property lists
+22.12.2019. 14:43:07	Gathering search properties
+22.12.2019. 14:43:07	Gathering full-text indexes
+22.12.2019. 14:43:07	Gathering column store indexes
+22.12.2019. 14:43:07	Gathering spatial indexes
+22.12.2019. 14:43:07	Gathering XML indexes
+22.12.2019. 14:43:07	Gathering Selective XML indexes
+22.12.2019. 14:43:07	Gathering encrypted triggers
+22.12.2019. 14:43:07	Gathering triggers
+22.12.2019. 14:43:07	Gathering encrypted and clr ddl triggers
+22.12.2019. 14:43:07	Gathering ddl triggers
+22.12.2019. 14:43:07	Gathering synonyms
+22.12.2019. 14:43:07	Gathering defaults
+22.12.2019. 14:43:07	Gathering data constraint uddt bindings
+22.12.2019. 14:43:07	Gathering rules
+22.12.2019. 14:43:07	Gathering data constraint uddt bindings
+22.12.2019. 14:43:07	Gathering message types
+22.12.2019. 14:43:07	Gathering queues
+22.12.2019. 14:43:07	Gathering contracts
+22.12.2019. 14:43:07	Gathering services
+22.12.2019. 14:43:07	Gathering event notifications
+22.12.2019. 14:43:07	Gathering remote service bindings
+22.12.2019. 14:43:07	Gathering broker priorities
+22.12.2019. 14:43:07	Gathering signatures
+22.12.2019. 14:43:07	Gathering data compression options
+22.12.2019. 14:43:07	Gathering sequence types
+22.12.2019. 14:43:07	Gathering security policies
+22.12.2019. 14:43:07	Gather column encryption keys
+22.12.2019. 14:43:07	Gathering column master keys
+22.12.2019. 14:43:07	Gathering external data sources
+22.12.2019. 14:43:07	Gathering external file formats
+22.12.2019. 14:43:07	Gathering external tables
+22.12.2019. 14:43:07	Gathering extended properties
+22.12.2019. 14:43:07	Gathering credentials
+22.12.2019. 14:43:07	Gathering logins
+22.12.2019. 14:43:07	Gathering server audits
+22.12.2019. 14:43:10	Scanning project for duplicate elements
+22.12.2019. 14:43:10	Finished duplicate element processing
+22.12.2019. 14:43:11	Finished importing database.
+22.12.2019. 14:43:11	A summary of the import was saved to the following location: D:\Projects\Kladionica\Database\Import Schema Logs\Database_20191222014257.log
+22.12.2019. 14:43:11	Click Finish to continue...

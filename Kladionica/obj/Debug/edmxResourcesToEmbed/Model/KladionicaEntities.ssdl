@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KladionicaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Listic">
+    <Key>
+      <PropertyRef Name="ListicId" />
+    </Key>
+    <Property Name="ListicId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VrijemeUplate" Type="datetime" Nullable="false" />
+    <Property Name="IznosUplate" Type="float" Nullable="false" />
+    <Property Name="MoguciDobitak" Type="float" />
+    <Property Name="UpdateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Oklada">
+    <Key>
+      <PropertyRef Name="OkladaId" />
+    </Key>
+    <Property Name="OkladaId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PonudaId" Type="bigint" Nullable="false" />
+    <Property Name="ListicId" Type="bigint" Nullable="false" />
+    <Property Name="Koeficient" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ponuda">
+    <Key>
+      <PropertyRef Name="PonudaId" />
+    </Key>
+    <Property Name="PonudaId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SusretId" Type="bigint" Nullable="false" />
+    <Property Name="Tip" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Koeficient" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Susret">
+    <Key>
+      <PropertyRef Name="SusretId" />
+    </Key>
+    <Property Name="SusretId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Domacin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gost" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Oklada_Listic">
+    <End Role="Listic" Type="Self.Listic" Multiplicity="1" />
+    <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Listic">
+        <PropertyRef Name="ListicId" />
+      </Principal>
+      <Dependent Role="Oklada">
+        <PropertyRef Name="ListicId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Oklada_Ponuda">
+    <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="1" />
+    <End Role="Oklada" Type="Self.Oklada" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ponuda">
+        <PropertyRef Name="PonudaId" />
+      </Principal>
+      <Dependent Role="Oklada">
+        <PropertyRef Name="PonudaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ponuda_Susret">
+    <End Role="Susret" Type="Self.Susret" Multiplicity="1" />
+    <End Role="Ponuda" Type="Self.Ponuda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Susret">
+        <PropertyRef Name="SusretId" />
+      </Principal>
+      <Dependent Role="Ponuda">
+        <PropertyRef Name="SusretId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetOkladas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ListicId" Type="bigint" Mode="In" />
+  </Function>
+  <EntityContainer Name="KladionicaModelStoreContainer">
+    <EntitySet Name="Listic" EntityType="Self.Listic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oklada" EntityType="Self.Oklada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ponuda" EntityType="Self.Ponuda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Susret" EntityType="Self.Susret" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Oklada_Listic" Association="Self.FK_Oklada_Listic">
+      <End Role="Listic" EntitySet="Listic" />
+      <End Role="Oklada" EntitySet="Oklada" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Oklada_Ponuda" Association="Self.FK_Oklada_Ponuda">
+      <End Role="Ponuda" EntitySet="Ponuda" />
+      <End Role="Oklada" EntitySet="Oklada" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ponuda_Susret" Association="Self.FK_Ponuda_Susret">
+      <End Role="Susret" EntitySet="Susret" />
+      <End Role="Ponuda" EntitySet="Ponuda" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

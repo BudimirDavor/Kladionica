@@ -1,0 +1,25 @@
+13189 [43] INFO Kladionica.Listici (null) - Successfully added new listic to database.
+12058 [59] INFO Kladionica.Listici - Successfully added new listiæ to database. Listiæ: 22.3.2020. 8:00:00 (Iznos: 50,00 kn, Moguæi dobitak: ?)
+102623 [7] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.
+111924 [9] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+121696 [10] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+135156 [11] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+144245 [10] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+156162 [10] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+214656 [11] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+243083 [10] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+256518 [14] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+283763 [6] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.
+286735 [6] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+11753 [12] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+18135 [13] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+11655 [12] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+19082 [13] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+33141 [6] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+10091 [9] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.
+32301 [11] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Zbroj moguæih dobitaka na identiènim listiæima ne smije biti veæi od 1000!
+42441 [7] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.
+45846 [8] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Zbroj moguæih dobitaka na identiènim listiæima ne smije biti veæi od 1000!
+69523 [9] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.
+74342 [7] ERROR Kladionica.Listici - Failed to update listiæ and/or moguæi dobitak. Error: Netko je u meðuvremenu veæ napravio promjene na tom zapisu!
+82842 [8] INFO Kladionica.Listici - Succesfully updated listiæ and moguæi dobitak.

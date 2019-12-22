@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KladionicaModelStoreContainer" CdmEntityContainer="Kladionica">
+    <EntitySetMapping Name="Listics">
+      <EntityTypeMapping TypeName="KladionicaModel.Listic">
+        <MappingFragment StoreEntitySet="Listic">
+          <ScalarProperty Name="ListicId" ColumnName="ListicId" />
+          <ScalarProperty Name="VrijemeUplate" ColumnName="VrijemeUplate" />
+          <ScalarProperty Name="IznosUplate" ColumnName="IznosUplate" />
+          <ScalarProperty Name="MoguciDobitak" ColumnName="MoguciDobitak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Okladas">
+      <EntityTypeMapping TypeName="KladionicaModel.Oklada">
+        <MappingFragment StoreEntitySet="Oklada">
+          <ScalarProperty Name="OkladaID" ColumnName="OkladaID" />
+          <ScalarProperty Name="PonudaID" ColumnName="PonudaID" />
+          <ScalarProperty Name="ListicID" ColumnName="ListicID" />
+          <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ponudas">
+      <EntityTypeMapping TypeName="KladionicaModel.Ponuda">
+        <MappingFragment StoreEntitySet="Ponuda">
+          <ScalarProperty Name="PonudaId" ColumnName="PonudaId" />
+          <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+          <ScalarProperty Name="Tip" ColumnName="Tip" />
+          <ScalarProperty Name="Koeficient" ColumnName="Koeficient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Susrets">
+      <EntityTypeMapping TypeName="KladionicaModel.Susret">
+        <MappingFragment StoreEntitySet="Susret">
+          <ScalarProperty Name="SusretId" ColumnName="SusretId" />
+          <ScalarProperty Name="Domacin" ColumnName="Domacin" />
+          <ScalarProperty Name="Gost" ColumnName="Gost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
