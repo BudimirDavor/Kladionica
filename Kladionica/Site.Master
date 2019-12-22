@@ -61,7 +61,7 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <div class="clear">
+            <div class="clear text-center">
                 <hr />
                 <footer>
                     <p>

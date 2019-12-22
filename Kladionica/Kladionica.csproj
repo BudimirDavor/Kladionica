@@ -123,6 +123,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\PregledOklada.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -136,6 +137,9 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\images\Listici.jpg" />
+    <Content Include="Content\images\PregledPonuda.jpg" />
+    <Content Include="Content\images\Susreti.jpg" />
     <Content Include="Listici.aspx" />
     <EntityDeploy Include="Model\KladionicaEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -159,6 +163,7 @@
     <Content Include="Oklade.aspx" />
     <Content Include="Ponude.aspx" />
     <Content Include="PregledOklada.aspx" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
