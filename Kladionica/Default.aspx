@@ -17,13 +17,13 @@
             </div>
             <br />
             <div class="float">
-                <a href="PregledOklada.aspx" title="Pregled oklada" class="link">
-                    <img src="Content/images/PregledOklada.jpg" />
+                <a href="PregledPonuda.aspx" title="Pregled ponuda" class="link">
+                    <img src="Content/images/PregledPonuda.jpg" />
                 </a>
             </div>
             <div class="float">
-                <a href="PregledPonuda.aspx" title="Pregled ponuda" class="link">
-                    <img src="Content/images/PregledPonuda.jpg" />
+                <a href="PregledOklada.aspx" title="Pregled oklada" class="link">
+                    <img src="Content/images/PregledOklada.jpg" />
                 </a>
             </div>
         </div>

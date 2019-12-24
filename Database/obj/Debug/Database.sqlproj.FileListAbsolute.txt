@@ -1,0 +1,6 @@
+D:\Projects\Kladionica\Database\bin\Debug\Database.dacpac
+D:\Projects\Kladionica\Database\bin\Debug\Database.dll
+D:\Projects\Kladionica\Database\bin\Debug\Database.pdb
+D:\Projects\Kladionica\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+D:\Projects\Kladionica\Database\obj\Debug\Database.dll
+D:\Projects\Kladionica\Database\obj\Debug\Database.pdb

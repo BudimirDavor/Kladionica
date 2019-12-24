@@ -65,7 +65,7 @@
                 <hr />
                 <footer>
                     <p>
-                        &copy; <%: DateTime.Now.Year %> - <%: Kladionica.Core.Constants.AppName %>
+                        &copy; <%: DateTime.Now.Year %> - <%: Kladionica.Core.Constants.AppName %> - <%: Kladionica.Core.Constants.AppVersion %> - <%: Kladionica.Core.Constants.AppAuthor %>
                     </p>
                 </footer>
             </div>
