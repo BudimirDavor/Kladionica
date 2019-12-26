@@ -29,7 +29,7 @@
             
         </div>
         <div>
-            <a href="logs/log.txt" title="Logovi" class="link" target="_blank"><h3>Logovi kreiranja listića</h3></a>
+            <a href="logs/log.txt" title="Logovi" class="link" target="_blank"><h4>Logovi kreiranja listića</h4></a>
         </div>
     </div>
 </asp:Content>
