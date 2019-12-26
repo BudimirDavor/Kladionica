@@ -117,7 +117,13 @@
                         </td>
                     </tr>
                 </ItemTemplate>
+                
             </asp:Repeater>
         </tbody>
     </table>
+    <div>
+        <a href="logs/log.txt" title="Logovi" class="link" target="_blank">
+            <h3>Logovi kreiranja listića</h3>
+        </a>
+    </div>
 </asp:Content>

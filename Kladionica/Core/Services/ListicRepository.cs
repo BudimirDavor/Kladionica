@@ -65,11 +65,6 @@ namespace Kladionica.Core
             }
         }
 
-        private Model.Listic Find(long listicId)
-        {
-            return _dataContext.Listics.Find(listicId);
-        }
-
         public void UpdateMoguciDobitak(long listicId)
         {
             var listic = GetListic(listicId);
@@ -145,6 +140,11 @@ namespace Kladionica.Core
                     throw new Exception($"Zbroj mogućih dobitaka na identičnim listićima ne smije biti veći od {Constants.MaxSumOfDobitakOnIdenticalListic}!");
                 }
             }
+        }
+
+        private Model.Listic Find(long listicId)
+        {
+            return _dataContext.Listics.Find(listicId);
         }
     }
 }
